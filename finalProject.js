@@ -282,8 +282,8 @@ function testKey() {
       <canvas id="out4" class="outGraph"></canvas><br>\
       <span id="outText"></span>';
   document.getElementById('outText').innerHTML = 'Key: '+key+'<br><br>';
-  document.getElementById('outText').innerHTML += 'Split:<br>'+JSON.stringify(generatePrimeGroup(binary.length))+'<br>';
-  document.getElementById('outText').innerHTML += JSON.stringify(splitKey)+'<br><br>';
+  document.getElementById('outText').innerHTML += 'Split:<br>'+JSON.stringify(generatePrimeGroup(binary.length), null, 2)+'<br>';
+  document.getElementById('outText').innerHTML += JSON.stringify(splitKey, null, 2)+'<br><br>';
   document.getElementById('outText').innerHTML += 'Period: '+lcm(generatePrimeGroup(key.length))+'<br><br>';
   document.getElementById('outText').innerHTML += 'Generated Key:<br>'+chunkString(outKey,5).join(' ');
   var counts = testRandom(genKey);
