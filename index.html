@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Binary Mode</title>
+    <style>
+    * {
+      font-family: "Courier New", Courier, monospace;
+    }
+    .outGraph {
+      height: 500px;
+      width: 500px;
+    }
+    </style>
+    <script src="finalProject.js"></script>
+    <script src="Chart.min.js"></script>
+  </head>
+  <body>
+    <p>
+      This generator operates by:<br>
+      1. Convert the string to a binary string using the alphabet:<br>
+      &nbsp;&nbsp;['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x', 'y','z','0','1','_','.',',','\'']<br>
+      2. Determine the ideal splitting of the letters based on the length of the key<br>
+      &nbsp;&nbsp;a. Maximizes the least common multiple of any number of numbers that add up to key length or less<br>
+      3. Split the binary string into groups<br>
+      4. Stack the groups of binary strings on top of each other<br>
+      5. XOR the bits at each position<br>
+      6. Convert the generated key back to text using the alphabet<br>
+    </p>
+    <p>In the graphs if there's fewer digits than expected there is a 0 in front (0 = 00 = 000)</p>
+    Key: <br>
+    <input type="text" id="key" value="abcdefghijklmnopqrstuvwxyz01 .,'"><br><br>
+    <input type="button" value="Test Key" onclick="testKey()"><br><br>
+    <div id="out"></div>
+  </body>
+</html>
